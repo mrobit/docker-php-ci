@@ -21,8 +21,9 @@ RUN cd ~/terminus && git checkout 2.0.0 && composer install
 RUN ln -s ~/terminus/bin/terminus /usr/local/bin/terminus
 
 # Install node.js
-RUN curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
-RUN sudo apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_11.x | bash
+RUN apt-get install -y nodejs
+
 
 # Make a placeholder .bashrc
 RUN echo '# Bash configuration' >> /root/.bashrc
