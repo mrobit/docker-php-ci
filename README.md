@@ -8,7 +8,11 @@ This is the source Dockerfile for the [pantheon-public/php-ci](https://quay.io/r
 In CircleCI 2.0:
 ```
   docker:
+<<<<<<< HEAD
     - image: mrobit/php-ci:2.x
+=======
+    - image: quay.io/pantheon-public/php-ci:latest
+>>>>>>> 281af183977640fb4454130da6f3fab1199b6cb8
 ```
 ## Image Contents
 
