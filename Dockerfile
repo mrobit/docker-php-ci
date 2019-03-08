@@ -11,6 +11,9 @@ ADD . /php-ci
 RUN echo 'phar.readonly=off' > /usr/local/etc/php/conf.d/phar.ini
 
 # Collect the components we need for this image
+RUN mkdir -p ~/.terminus/plugins
+RUN composer -n create-project -d ~/.terminus/plugins pantheon-systems/terminus-rsync-plugin:^1
+
 RUN apt-get update
 RUN apt-get install -y ruby
 RUN apt-get install -y gnupg2
